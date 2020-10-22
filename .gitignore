@@ -1,0 +1,12 @@
+# Directory
+auto-save-list/
+elpa/
+backups/
+transient/
+# File
+eshell/history
+eshell/lastdir
+recentf
+tramp
+company*.el
+history

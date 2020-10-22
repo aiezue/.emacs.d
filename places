@@ -1,0 +1,14 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/home/aiezue/dotfiles/dot/.xprofile" . 193)
+ ("/home/aiezue/.emacs.d/config/init-git.el" . 93)
+ ("/home/aiezue/dotfiles/"
+  (dired-filename . "/home/aiezue/dotfiles/fish"))
+ ("/home/aiezue/.emacs.d/config/init-ui.el" . 725)
+ ("/home/aiezue/.emacs.d/config/init-theme.el" . 100)
+ ("/home/aiezue/.emacs.d/config/init-shell.el" . 289)
+ ("/home/aiezue/.emacs.d/config/init-ivy.el" . 356)
+ ("/home/aiezue/.emacs.d/elpa/counsel-20200922.1006/counsel-autoloads.el" . 17069)
+ ("/home/aiezue/.emacs.d/elpa/swiper-20200503.1102/swiper-autoloads.el" . 1342)
+ ("/home/aiezue/.emacs.d/elpa/ivy-20200826.955/ivy-autoloads.el" . 5281)
+ ("/home/aiezue/.emacs.d/init.el" . 163)
+ ("/home/aiezue/.emacs.d/config/init-basic.el" . 1327))
