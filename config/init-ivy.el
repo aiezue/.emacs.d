@@ -8,14 +8,20 @@
    ("C-c v ." . ivy-switch-view))
   :custom
   ((ivy-use-virtual-buffers . t)
-   (enable-recursive-minibuffers . t)))
+   (ivy-display-style . 'fancy)
+   (enable-recursive-minibuffers . t)
+   (ivy-re-builders-alist . 
+			  '((t . ivy--regex-fuzzy)))
+   (ivy-initial-inputs-alist . nil)))
 
 (leaf counsel
   :ensure t
   :hook ((after-init-hook . counsel-mode))
   :bind
   (("C-x C-f" . counsel-find-file)
-   ("C-." . counsel-imenu)  
+   ("C-x C-r" . counsel-recentf)
+   ("C-x C-b"   . counsel-ibuffer)
+   ("C-c ."   . counsel-imenu)  
    ("C-c L" . counsel-load-library)
    ("C-c O" . counsel-find-file-extern)
    ("C-c P" . counsel-package)

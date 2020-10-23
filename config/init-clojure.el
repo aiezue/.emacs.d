@@ -8,7 +8,6 @@
 
 (leaf cider
   :ensure t
-  :commands (cider cider-connect cider-jack-in)
   :custom
   ((cider-auto-select-error-buffer . t)
    (cider-repl-pop-to-buffer-on-connect . nil)
@@ -21,10 +20,13 @@
   :hook
   ((cider-repl-mode-hook . subword-mode)
    (cider-repl-mode-hook . paredit-mode)
-   (cider-mode-hook .paredit-mode))
+   (cider-repl-mood-hook . eldoc-mode))
   :bind
   (:cider-mode-map
    ("C-c C-v C-c" . cider-send-and-evaluate-sexp)
    ("C-c C-p"     . cider-eval-print-last-sexp)))
+
+(leaf clojure-mode-extra-font-locking
+  :ensure t)
 
 (provide 'init-clojure)

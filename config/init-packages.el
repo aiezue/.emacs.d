@@ -1,3 +1,4 @@
+(setq gc-cons-threshold most-positive-fixnum)
 (eval-and-compile
   (customize-set-variable
    'package-archives '(("gnu" . "https://mirrors.bfsu.edu.cn/elpa/gnu/")

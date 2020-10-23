@@ -7,12 +7,10 @@
 	   (flycheck-emacs-lisp-load-path . 'inherit)
 	   (flycheck-check-syntax-automatically . '(save mode-enabled))))
 
-(leaf flycheck-posframe
+(leaf flycheck-inline
   :ensure t
-  :if (display-graphic-p)
-  :hook ((flycheck-mode-hook . flycheck-posframe-mode))
-  :custom (flycheck-posframe-inhibit-functions . '((lambda (&rest _)
-						   (bound-and-true-p company-backend)))))
+  :after flycheck
+  :hook (flycheck-mode-hook . flycheck-inline-mode))
 
 (leaf flycheck-clj-kondo
   :ensure t)

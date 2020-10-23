@@ -1,9 +1,5 @@
-(add-hook 'after-init-hook
-		  (lambda () (setq gc-cons-threshold 100000000)))
-
-(setq gc-cons-threshold most-positive-fixnum
-	  gc-cons-percentage 0.6)
-
+(setq gc-cons-threshold most-positive-fixnum)
+(setq package-enable-at-startup nil)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)

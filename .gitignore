@@ -3,6 +3,7 @@ auto-save-list/
 elpa/
 backups/
 transient/
+undo-fu-session/
 # File
 eshell/history
 eshell/lastdir
@@ -10,3 +11,4 @@ recentf
 tramp
 company*.el
 history
+places

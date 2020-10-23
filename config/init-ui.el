@@ -9,13 +9,21 @@
   (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
   (set-fontset-font t 'symbol "Symbola" nil 'append))
 
-(leaf visual-line-hl-line-pretty-symbol
+(leaf visual-bell
   :tag "builtin"
-  :config
-  (global-visual-line-mode t)
-  (global-hl-line-mode t)
-  (prettify-symbols-mode t)
-  (recentf-mode t))
+  :custom (visual-bell . t))
+
+(leaf fill-column
+  :tag "builtin"
+  :setq-default (fill-column . 80))
+
+(leaf visual-line-hl-line
+  :tag "builtin"
+  :global-minor-mode (global-visual-line-mode global-hl-line-mode))
+
+(leaf prettify-symbols
+  :tag "builtin"
+  :global-minor-mode global-prettify-symbols-mode)
 
 (leaf line-number
   :tag "builtin"
@@ -34,9 +42,17 @@
   :ensure t
   :init (which-key-mode))
 
-(leaf hungry-delete
+(leaf mwim
   :ensure t
-  :global-minor-mode global-hungry-delete-mode
-  :setq-default (hungry-delete-chars-to-skip . " \t\f\v"))
+  :bind
+  (("C-a" . mwim-beginning-of-code-or-line)
+   ("C-e" . mwim-end-of-code-or-line)))
+
+(leaf windmove
+  :tag "builtin"
+  :config (windmove-default-keybindings))
+
+(leaf auto-fill-mode
+  :hook (prog-mode-hook text-mode-hook))
 
 (provide 'init-ui)

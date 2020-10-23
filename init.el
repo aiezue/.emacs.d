@@ -1,7 +1,7 @@
 (add-to-list 'load-path
 	     (expand-file-name "config" user-emacs-directory))
-(require 'init-startup)
 (require 'init-packages)
+(require 'init-gc)
 (require 'init-basic)
 (require 'init-ivy)
 (require 'init-theme)
@@ -16,3 +16,4 @@
 (require 'init-shell)
 (require 'init-dired)
 (require 'init-paredit)
+(require 'init-latex)
