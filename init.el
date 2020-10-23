@@ -17,3 +17,4 @@
 (require 'init-dired)
 (require 'init-paredit)
 (require 'init-latex)
+(require 'init-markdown)

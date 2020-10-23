@@ -77,8 +77,7 @@
   :ensure t
   :after flyspell
   :hook (flyspell-mode-hook . flyspell-popup-auto-correct-mode)
-  :bind ((:flyspell-mode-map
-	  ("C-c 9" . flyspell-popup-correct))
+  :bind (("C-c 9" . flyspell-popup-correct)
 	 (:popup-menu-keymap
 	  ("TAB" . popup-next)
           ("S-TAB" . popup-previous))))
