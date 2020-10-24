@@ -4,8 +4,6 @@
 	 ("C-c a" . org-agenda)
 	 ("C-c n" . counsel-org-goto-all)
 	 ("C-c c" . counsel-org-capture)
-	 (:org-agenda-mode-map
-	  ("C-c C-q" . counsel-org-tag-agenda))
 	 (:org-mode-map
 	  ("C-c n" . counsel-org-goto)
 	  ("C-c C-q" . counsel-org-tag)
@@ -47,6 +45,9 @@
 
 (leaf org-agenda
   :tag "builtin"
+  :bind
+  ((:org-agenda-mode-map
+    ("C-c C-q" . counsel-org-tag-agenda)))
   :custom
   ((org-todo-keywords         . '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)") (sequence "WAIT(w)" "HOLD(h)""IDEA(i)" "|" "STOP(s@/!)")))
    (org-default-notes-file    .  "~/org/inbox.org")

@@ -5,6 +5,7 @@
   (("C-c C-r" . ivy-resume)
    ("C-c v p" . ivy-push-view)
    ("C-c v o" . ivy-pop-view)
+   ("C-x C-b" . ivy-switch-buffer)
    ("C-c v ." . ivy-switch-view))
   :custom
   ((ivy-use-virtual-buffers . t)
@@ -20,7 +21,6 @@
   :bind
   (("C-x C-f" . counsel-find-file)
    ("C-x C-r" . counsel-recentf)
-   ("C-x C-b"   . counsel-ibuffer)
    ("C-c ."   . counsel-imenu)  
    ("C-c L" . counsel-load-library)
    ("C-c O" . counsel-find-file-extern)
