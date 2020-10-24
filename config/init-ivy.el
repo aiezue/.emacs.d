@@ -45,4 +45,8 @@
    ("s-f"   . swiper)
    ("C-S-s" . swiper-all)))
 
+(leaf ivy-rich
+  :ensure t
+  :config (ivy-rich-mode 1))
+
 (provide 'init-ivy)

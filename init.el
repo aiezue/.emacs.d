@@ -18,3 +18,5 @@
 (require 'init-paredit)
 (require 'init-latex)
 (require 'init-markdown)
+(require 'init-projectile)
+(require 'init-org)

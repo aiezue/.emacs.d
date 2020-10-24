@@ -54,7 +54,7 @@
    '(("gnu" . "https://mirrors.bfsu.edu.cn/elpa/gnu/")
      ("melpa" . "https://mirrors.bfsu.edu.cn/elpa/melpa/")))
  '(package-selected-packages
-   '(markdown-mode synosaurus flyspell-popup flyspell-correct-popup flyspell-correct-ivy flyspell-correct gcmh auto-fill-mode company-auctex company-math tex delete-selection flycheck-inline anzu mwim multiple-cursors flx paredit diredfl eshell-syntax-highlighting eshell-prompt-extras yaml-mode expand-region iedit wgrep undo-fu-session undo-fu beginend aggressive-indent clojure-mode-extra-font-locking cider clojure-mode company-statistics company-quickhelp company-box company yasnippet-snippets yasnippet flycheck-clj-kondo flycheck-posframe flycheck gitignore-mode diff-hl magit hungry-delete which-key rainbow-delimiters mood-line color-theme-sanityinc-tomorrow counsel ivy leaf-keywords leaf))
+   '(ivy-rich ox-beamer org-download ox-hugo org-re-reveal ox-twbs org-variable-pitch counsel-projectile projectile markdown-mode synosaurus flyspell-popup flyspell-correct-popup flyspell-correct-ivy flyspell-correct gcmh auto-fill-mode company-auctex company-math tex delete-selection flycheck-inline anzu mwim multiple-cursors flx paredit diredfl eshell-syntax-highlighting eshell-prompt-extras yaml-mode expand-region iedit wgrep undo-fu-session undo-fu beginend aggressive-indent clojure-mode-extra-font-locking cider clojure-mode company-statistics company-quickhelp company-box company yasnippet-snippets yasnippet flycheck-clj-kondo flycheck-posframe flycheck gitignore-mode diff-hl magit hungry-delete which-key rainbow-delimiters mood-line color-theme-sanityinc-tomorrow counsel ivy leaf-keywords leaf))
  '(recentf-auto-cleanup 'never)
  '(recentf-max-menu-items 15)
  '(recentf-max-saved-items 500)
@@ -79,4 +79,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(org-level-1 ((t (:inherit outline-1 :height 1.0))) nil "Customized with leaf in org block")
+ '(org-level-2 ((t (:inherit outline-2 :height 1.0))) nil "Customized with leaf in org block")
+ '(org-level-3 ((t (:inherit outline-3 :height 1.0))) nil "Customized with leaf in org block")
+ '(org-level-4 ((t (:inherit outline-4 :height 1.0))) nil "Customized with leaf in org block")
+ '(org-level-5 ((t (:inherit outline-5 :height 1.0))) nil "Customized with leaf in org block"))

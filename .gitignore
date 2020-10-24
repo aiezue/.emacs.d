@@ -12,3 +12,5 @@ tramp
 company*.el
 history
 places
+/bookmarks
+/projectile-bookmarks.eld
