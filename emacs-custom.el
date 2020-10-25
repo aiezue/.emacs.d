@@ -50,6 +50,7 @@
  '(company-quickhelp-delay 0.3)
  '(company-tooltip-align-annotations t)
  '(company-tooltip-limit 20)
+ '(counsel-fzf-cmd "sk -f \"%s\" | cut -f 2" t)
  '(custom-enabled-themes '(sanityinc-tomorrow-night))
  '(custom-file "~/.emacs.d/emacs-custom.el")
  '(custom-safe-themes
@@ -86,18 +87,18 @@
  '(org-capture-templates
    '(("s" "Todo with Link" entry
       (file+headline "~/org/inbox.org" "Todo")
-      "* TODO %i%? 
-:PROPERTIES: 
-:CREATED: %U 
-:END: 
+      "* TODO %i%?
+:PROPERTIES:
+:CREATED: %U
+:END:
  %a
 ")
      ("z" "Bookmark with Link" entry
       (file+headline "~/org/inbox.org" "Bookmark")
-      "* Thoughts on %a 
-:PROPERTIES: 
-:CREATED: %U 
-:END: 
+      "* Thoughts on %a
+:PROPERTIES:
+:CREATED: %U
+:END:
  %?
 ")
      ("p" "Process the Mail in 2 Days" entry
@@ -127,19 +128,20 @@ DEADLINE:
       #'org-hugo-new-subtree-post-capture-template)
      ("S" "Hugo Site Post" entry
       (file+headline "~/blog/content-org/blog.org" "site")
-      #'org-hugo-new-subtree-post-capture-template)))
+      #'org-hugo-new-subtree-post-capture-template)) t)
  '(org-default-notes-file "~/org/inbox.org")
- '(org-download-heading-lvl nil)
- '(org-download-method 'directory)
- '(org-download-screenshot-method "scrot -d 3 -s %s")
+ '(org-download-heading-lvl nil t)
+ '(org-download-method 'directory t)
+ '(org-download-screenshot-method "scrot -d 3 -s %s" t)
  '(org-html-htmlize-font-prefix "org-")
  '(org-html-htmlize-output-type 'css)
  '(org-latex-compiler "xelatex")
  '(org-latex-create-formula-image-program 'imagemagick)
  '(org-latex-pdf-process
    '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+ '(org-preview-latex-default-process 'imagemagick)
  '(org-re-reveal-root "/home/aiezue/org/reveal.js" t)
- '(org-refile-targets '((nil :maxlevel . 2) (org-agenda-files :maxlevel . 3)))
+ '(org-refile-targets '((nil :maxlevel . 2) (org-agenda-files :maxlevel . 3)) t)
  '(org-reverse-note-order t)
  '(org-src-fontify-natively t)
  '(org-todo-keywords
@@ -149,7 +151,7 @@ DEADLINE:
    '(("gnu" . "https://mirrors.bfsu.edu.cn/elpa/gnu/")
      ("melpa" . "https://mirrors.bfsu.edu.cn/elpa/melpa/")))
  '(package-selected-packages
-   '(srcery-theme zenburn-theme ivy-rich ox-beamer org-download ox-hugo org-re-reveal ox-twbs org-variable-pitch counsel-projectile projectile markdown-mode synosaurus flyspell-popup flyspell-correct-popup flyspell-correct-ivy flyspell-correct gcmh auto-fill-mode company-auctex company-math tex delete-selection flycheck-inline anzu mwim multiple-cursors flx paredit diredfl eshell-syntax-highlighting eshell-prompt-extras yaml-mode expand-region iedit wgrep undo-fu-session undo-fu beginend aggressive-indent clojure-mode-extra-font-locking cider clojure-mode company-statistics company-quickhelp company-box company yasnippet-snippets yasnippet flycheck-clj-kondo flycheck-posframe flycheck gitignore-mode diff-hl magit hungry-delete which-key rainbow-delimiters mood-line color-theme-sanityinc-tomorrow counsel ivy leaf-keywords leaf))
+   '(ace-window ace-link crux ws-butler srcery-theme zenburn-theme ivy-rich ox-beamer org-download ox-hugo org-re-reveal ox-twbs org-variable-pitch counsel-projectile projectile markdown-mode synosaurus flyspell-popup flyspell-correct-popup flyspell-correct-ivy flyspell-correct gcmh auto-fill-mode company-auctex company-math tex delete-selection flycheck-inline anzu mwim multiple-cursors flx paredit diredfl eshell-syntax-highlighting eshell-prompt-extras yaml-mode expand-region iedit wgrep undo-fu-session undo-fu beginend aggressive-indent clojure-mode-extra-font-locking cider clojure-mode company-statistics company-quickhelp company-box company yasnippet-snippets yasnippet flycheck-clj-kondo flycheck-posframe flycheck gitignore-mode diff-hl magit hungry-delete which-key rainbow-delimiters mood-line color-theme-sanityinc-tomorrow counsel ivy leaf-keywords leaf))
  '(preview-auto-cache-preamble t t)
  '(projectile-completion-system 'ivy)
  '(projectile-enable-caching t)

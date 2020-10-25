@@ -1,12 +1,25 @@
+(leaf org-agenda
+  :tag "builtin"
+  :bind
+  ((:org-agenda-mode-map
+    ("C-c C-q" . counsel-org-tag-agenda)))
+  :custom
+  ((org-todo-keywords         . '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)") (sequence "WAIT(w)" "HOLD(h)""IDEA(i)" "|" "STOP(s@/!)")))
+   (org-default-notes-file    .  "~/org/inbox.org")
+   (org-agenda-files          . '("~/org/school.org"
+				  "~/org/personal.org"))))
+
 (leaf org
   :tag "builtin"
   :bind (("C-c l" . org-store-link)
 	 ("C-c a" . org-agenda)
-	 ("C-c n" . counsel-org-goto-all)
+	 ("C-c n" . counsel-org-agenda-headlines)
 	 ("C-c c" . counsel-org-capture)
 	 (:org-mode-map
-	  ("C-c n" . counsel-org-goto)
+	  ("C-c n" . counsel-org-goto-all)
 	  ("C-c C-q" . counsel-org-tag)
+	  ("C-c C-o" . counsel-ace-link)
+	  ("C-c C-S-o" . org-open-at-point)
 	  ("C-c 1" . counsel-org-link)
 	  ("C-c 2" . counsel-org-entity)))
   :custom
@@ -42,17 +55,6 @@
 (leaf org-variable-pitch
   :ensure t
   :hook (org-mode-hook . org-variable-pitch-minor-mode))
-
-(leaf org-agenda
-  :tag "builtin"
-  :bind
-  ((:org-agenda-mode-map
-    ("C-c C-q" . counsel-org-tag-agenda)))
-  :custom
-  ((org-todo-keywords         . '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)") (sequence "WAIT(w)" "HOLD(h)""IDEA(i)" "|" "STOP(s@/!)")))
-   (org-default-notes-file    .  "~/org/inbox.org")
-   (org-agenda-files          . '("~/org/school.org"
-				  "~/org/personal.org"))))
 
 (leaf org-refile
   :tag "builtin"

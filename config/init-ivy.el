@@ -18,6 +18,7 @@
 (leaf counsel
   :ensure t
   :hook ((after-init-hook . counsel-mode))
+  :custom (counsel-fzf-cmd . "sk -f \"%s\" | cut -f 2")
   :bind
   (("C-x C-f" . counsel-find-file)
    ("C-x C-r" . counsel-recentf)
@@ -48,5 +49,26 @@
 (leaf ivy-rich
   :ensure t
   :config (ivy-rich-mode 1))
+
+(leaf ace-link
+  :ensure t
+  :init (ace-link-setup-default)
+  :bind (("C-c C-S-o" . ace-link-addr)
+	 ("C-c C-o"   . counsel-ace-link)))
+
+(leaf avy
+  :ensure t
+  :init (avy-setup-default)
+  :bind
+  (("M-g c" . avy-goto-char)
+   ("M-g M-c" . avy-goto-char-2)
+   ("M-g g"   . avy-goto-line)
+   ("M-g w"   . avy-goto-word-1)
+   ("M-g M-w" . avy-goto-word-0)))
+
+(leaf ace-window
+  :ensure t
+  :custom ((aw-dispatch-always . t))
+  :bind ("M-o" . ace-window))
 
 (provide 'init-ivy)

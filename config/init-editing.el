@@ -84,9 +84,13 @@
 
 (leaf synosaurus
   :ensure t
-  :bind ("C-c 0" . synosaurus-choose-and-replace)
+  :bind("C-c 0" . synosaurus-choose-and-replace)
   :hook (prog-mode-hook text-mode-hook org-mode-hook)
   :custom (synosaurus-choose-method . 'popup)
   :config (synosaurus-mode))
+
+(leaf ws-butler
+  :ensure t
+  :global-minor-mode ws-butler-global-mode)
 
 (provide 'init-editing)
