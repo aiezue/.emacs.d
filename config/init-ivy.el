@@ -52,6 +52,7 @@
 
 (leaf ace-link
   :ensure t
+  :hook (w3m-mode)
   :init (ace-link-setup-default)
   :bind (("C-c C-S-o" . ace-link-addr)
 	 ("C-c C-o"   . counsel-ace-link)))

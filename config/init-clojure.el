@@ -1,3 +1,6 @@
+(leaf flycheck-clj-kondo
+  :ensure t)
+
 (leaf clojure-mode
   :ensure t
   :hook

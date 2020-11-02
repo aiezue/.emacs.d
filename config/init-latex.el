@@ -24,8 +24,9 @@
 				   (output-html "xdg-open"))))
   :hook
   ((TeX-after-compilation-finished-functions . TeX-revert-document-buffer)
-   (TeX-source-correlate-mode)
-   (LaTeX-math-mode)))
+   (latex-mode-hook . TeX-source-correlate-mode)
+   (latex-mode-hook . LaTeX-math-mode)
+   (latex-mode-hook . TeX-fold-mode)))
 
 (leaf company-math
   :ensure t
@@ -43,12 +44,17 @@
 
 (leaf reftex
   :ensure t
-  :hook (latex-mode-hook)
+  :hook (latex-mode-hook . turn-on-reftex)
   :custom
   ((reftex-plug-into-AUCTeX . t)
    (reftex-enable-partial-scans . t)
    (reftex-save-parse-info . t)
    (reftex-use-multiple-selection-buffers . t)
    (reftex-toc-split-windows-fraction . 0.2)))
+
+(leaf cdlatex
+  :ensure t
+  :hook ((latex-mode-hook . turn-on-cdlatex)
+	 (org-mode-hook   . turn-on-org-cdlatex)))
 
 (provide 'init-latex)

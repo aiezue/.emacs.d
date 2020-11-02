@@ -55,4 +55,8 @@
 (leaf auto-fill-mode
   :hook (prog-mode-hook text-mode-hook))
 
+(leaf eyebrowse
+  :ensure t
+  :config (eyebrowse-mode 1))
+
 (provide 'init-ui)

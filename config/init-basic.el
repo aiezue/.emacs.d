@@ -129,10 +129,24 @@
 
 (leaf follow-symlinks
   :tag "builtin"
-  :custom (vc-follow-link . t))
+  :custom ((vc-follow-symlinks . t)))
 
 (leaf authoinfo
   :tag "builtin"
   :custom (auth-sources . '((:source "~/.authinfo.gpg" :host t :protocol t))))
+
+(leaf epa
+  :tag "builtin"
+  :config (epa-file-enable))
+
+(leaf cal-china-x
+  :ensure t
+  :custom
+  ((mark-holidays-in-calendar . t)
+   (cal-china-x-important-holidays . 'cal-china-x-chinese-holidays)
+   (cal-china-x-general-holidays . '((holiday-lunar 1 15 "元宵节")))
+   (calendar-holidays . (append cal-china-x-important-holidays
+				cal-china-x-general-holidays
+				other-holidays))))
 
 (provide 'init-basic)
