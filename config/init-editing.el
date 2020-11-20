@@ -63,8 +63,7 @@
 
 (leaf flyspell
   :tag "builtin"
-  :hook ((prog-mode-hook . flyspell-prog-mode)
-         (org-mode-hook  . flyspell-mode)
+  :hook ((org-mode-hook  . flyspell-mode)
          (text-mode-hook . flyspell-mode))
   :custom
   ((ispell-list-command . "list")
@@ -81,13 +80,6 @@
 	 (:popup-menu-keymap
 	  ("TAB" . popup-next)
           ("S-TAB" . popup-previous))))
-
-(leaf synosaurus
-  :ensure t
-  :bind("C-c 0" . synosaurus-choose-and-replace)
-  :hook (prog-mode-hook text-mode-hook org-mode-hook)
-  :custom (synosaurus-choose-method . 'popup)
-  :config (synosaurus-mode))
 
 (leaf ws-butler
   :ensure t

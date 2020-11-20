@@ -40,6 +40,7 @@
 
 (leaf org-babel-load-languages
   :tag "builtin"
+  :after org-babel
   :config
   (org-babel-do-load-languages
    'org-babel-load-languages
@@ -97,9 +98,9 @@
 (leaf ox-twbs
   :ensure t)
 
-(leaf org-re-reveal
+(leaf ox-reveal
   :ensure t
-  :custom (org-re-reveal-root . "/home/aiezue/org/reveal.js"))
+  :require ox-reveal)
 
 (leaf ox-hugo
   :ensure t

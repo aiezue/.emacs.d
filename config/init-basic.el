@@ -137,7 +137,7 @@
 
 (leaf epa
   :tag "builtin"
-  :config (epa-file-enable))
+  :defer-config (epa-file-enable))
 
 (leaf cal-china-x
   :ensure t

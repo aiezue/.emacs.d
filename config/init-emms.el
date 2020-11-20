@@ -6,7 +6,7 @@
   (emms-default-players)
   :config
   (emms-history-load)
-  (emms-librefm-scrobbler-enable)
+  ;; (emms-librefm-scrobbler-enable)
   :custom
   ((emms-player-list . '(emms-player-mpv))
    (emms-info-functions . '(emms-info-libtag))

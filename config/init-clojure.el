@@ -4,8 +4,7 @@
 (leaf clojure-mode
   :ensure t
   :hook
-  ((clojure-mode-hook . paredit-mode)
-   (clojure-mode-hook . subword-mode)
+  ((clojure-mode-hook . subword-mode)
    (clojure-mode-hook . eldoc-mode))
   :require (flycheck-clj-kondo))
 
@@ -22,7 +21,6 @@
    (nrepl-popup-stacktraces .nil))
   :hook
   ((cider-repl-mode-hook . subword-mode)
-   (cider-repl-mode-hook . paredit-mode)
    (cider-repl-mood-hook . eldoc-mode))
   :bind
   (:cider-mode-map

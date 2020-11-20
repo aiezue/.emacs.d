@@ -66,7 +66,7 @@
  '(enable-recursive-minibuffers t)
  '(eshell-highlight-prompt nil t)
  '(eshell-prompt-function 'epe-theme-lambda t)
- '(eww-search-prefix "http://www.google.com/search?q=" t)
+ '(eww-search-prefix "http://www.google.com/search?q=")
  '(flycheck-check-syntax-automatically '(save mode-enabled))
  '(flycheck-emacs-lisp-initialize-packages t)
  '(flycheck-emacs-lisp-load-path 'inherit)
@@ -148,7 +148,7 @@ DEADLINE:
  '(org-latex-pdf-process
    '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
  '(org-preview-latex-default-process 'imagemagick)
- '(org-re-reveal-root "/home/aiezue/org/reveal.js" t)
+ '(org-re-reveal-root "/home/aiezue/org/reveal.js")
  '(org-refile-targets '((nil :maxlevel . 2) (org-agenda-files :maxlevel . 3)) t)
  '(org-reverse-note-order t)
  '(org-src-fontify-natively t)
@@ -160,7 +160,7 @@ DEADLINE:
    '(("gnu" . "https://mirrors.bfsu.edu.cn/elpa/gnu/")
      ("melpa" . "https://mirrors.bfsu.edu.cn/elpa/melpa/")))
  '(package-selected-packages
-   '(smartparens python-mode isortify flycheck-pycheckers blacken company-anaconda anaconda-mode dap-mode company-lsp lsp-mode cdlatex eyebrowse emms-info-mediainfo emms cal-china-x w3m ace-window ace-link crux ws-butler srcery-theme zenburn-theme ivy-rich ox-beamer org-download ox-hugo org-re-reveal ox-twbs org-variable-pitch counsel-projectile projectile markdown-mode synosaurus flyspell-popup flyspell-correct-popup flyspell-correct-ivy flyspell-correct gcmh auto-fill-mode company-auctex company-math tex delete-selection flycheck-inline anzu mwim multiple-cursors flx paredit diredfl eshell-syntax-highlighting eshell-prompt-extras yaml-mode expand-region iedit wgrep undo-fu-session undo-fu beginend aggressive-indent clojure-mode-extra-font-locking cider clojure-mode company-statistics company-quickhelp company-box company yasnippet-snippets yasnippet flycheck-clj-kondo flycheck-posframe flycheck gitignore-mode diff-hl magit hungry-delete which-key rainbow-delimiters mood-line color-theme-sanityinc-tomorrow counsel ivy leaf-keywords leaf))
+   '(ox-reveal auctex smartparens python-mode isortify flycheck-pycheckers blacken company-anaconda anaconda-mode dap-mode company-lsp lsp-mode cdlatex eyebrowse emms-info-mediainfo emms cal-china-x w3m ace-window ace-link crux ws-butler srcery-theme zenburn-theme ivy-rich ox-beamer org-download ox-hugo org-re-reveal ox-twbs org-variable-pitch counsel-projectile projectile markdown-mode synosaurus flyspell-popup flyspell-correct-popup flyspell-correct-ivy flyspell-correct gcmh auto-fill-mode company-auctex company-math tex delete-selection flycheck-inline anzu mwim multiple-cursors flx paredit diredfl eshell-syntax-highlighting eshell-prompt-extras yaml-mode expand-region iedit wgrep undo-fu-session undo-fu beginend aggressive-indent clojure-mode-extra-font-locking cider clojure-mode company-statistics company-quickhelp company-box company yasnippet-snippets yasnippet flycheck-clj-kondo flycheck-posframe flycheck gitignore-mode diff-hl magit hungry-delete which-key rainbow-delimiters mood-line color-theme-sanityinc-tomorrow counsel ivy leaf-keywords leaf))
  '(preview-auto-cache-preamble t t)
  '(projectile-completion-system 'ivy)
  '(projectile-enable-caching t)
