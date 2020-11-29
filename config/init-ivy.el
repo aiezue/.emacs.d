@@ -10,10 +10,7 @@
   :custom
   ((ivy-use-virtual-buffers . t)
    (ivy-display-style . 'fancy)
-   (enable-recursive-minibuffers . t)
-   (ivy-re-builders-alist . 
-			  '((t . ivy--regex-fuzzy)))
-   (ivy-initial-inputs-alist . nil)))
+   (enable-recursive-minibuffers . t)))
 
 (leaf counsel
   :ensure t

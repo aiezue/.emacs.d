@@ -1,12 +1,12 @@
 (leaf auctex
   :ensure t
-  :mode ("\\.tex\\'" . latex-mode)
   :custom
   ((TeX-auto-save . t)
    (TeX-engine . 'xetex)
    (TeX-parse-self . t)
    (TeX-clean-confirm . nil)
    (TeX-save-query . nil)
+   (TeX-source-correlate-mode . t)
    (TeX-master . nil)
    (TeX-electric-escape . t)
    (TeX-source-specials-view-start-server . t)
@@ -24,27 +24,11 @@
 				   (output-html "xdg-open"))))
   :hook
   ((TeX-after-compilation-finished-functions . TeX-revert-document-buffer)
-   (latex-mode-hook . TeX-source-correlate-mode)
-   (latex-mode-hook . LaTeX-math-mode)
-   (latex-mode-hook . TeX-fold-mode)))
-
-(leaf company-math
-  :ensure t
-  :config
-  (defun my-latex-mode-setup ()
-    (setq-local company-backends
-		(append '((company-math-symbols-latex company-latex-commands))
-			company-backends)))
-  :hook (latex-mode-hook . my-latex-mode-setup))
-
-(leaf company-auctex
-  :ensure t
-  :hook (latex-mode-hook)
-  :config (company-auctex-init))
+   (TeX-mode-hook . LaTeX-math-mode)))
 
 (leaf reftex
   :ensure t
-  :hook (latex-mode-hook . turn-on-reftex)
+  :hook (LaTeX-mode-hook . turn-on-reftex)
   :custom
   ((reftex-plug-into-AUCTeX . t)
    (reftex-enable-partial-scans . t)
@@ -54,7 +38,7 @@
 
 (leaf cdlatex
   :ensure t
-  :hook ((latex-mode-hook . turn-on-cdlatex)
+  :hook ((LaTeX-mode-hook . turn-on-cdlatex)
 	 (org-mode-hook   . turn-on-org-cdlatex)))
 
 (provide 'init-latex)

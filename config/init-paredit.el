@@ -1,6 +1,7 @@
 (leaf paredit
   :ensure t
-  :hook (emacs-lisp-mode-hook
+  :hook (TeX-mode-hook
+	 emacs-lisp-mode-hook
 	 ielm-mode-hook
 	 clojure-mode-hook
 	 cider-mode-hook
